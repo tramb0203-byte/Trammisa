@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Em dỗ anh nè</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .box {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        max-width: 330px;
+    }
+    h1 {
+        color: #ff5c8a;
+        font-size: 22px;
+    }
+    p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+    }
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    #yes {
+        background: #ff5c8a;
+        color: white;
+    }
+    #no {
+        background: #ddd;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Anh bé ơi 🥺</h1>
+    <p>
+        Em chin nhỗi abe mò,<br> 
+        anh bé đừng có dận em nữa nhoaaa🥺
+        
+    </p>
+    <p>
+        nha nha abe đừng dỗi em nho🥺🥺<br>
+      
+    </p>
+    <p>👉 Abe chọn cho em bé nha</p>
+    <button id="yes" onclick="yesClick()">Anh hết dỗi rồi nè</button>
+    <button id="no" onmouseover="moveNo()">Không anh vẫn dỗi 😤</button>
+</div>
+
+<script>
+function yesClick() {
+    document.body.innerHTML = `
+    <div style="text-align:center; color:white;">
+        <h1>Hehe 🤍</h1>
+        <p>Ehehe em bít mò anh bé sẽ hong dỗi em nữa mò, thưn anh bé nhứt 💕</p>
+    </div>
+    `;
+}
+
+function moveNo() {
+    const btn = document.getElementById("no");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
